@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        rel="stylesheet"
+        id="bootstrap-css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+</head>
+
+<body class="bodytag">
+<div class="container">
+  <div class="row">
+  </div>
+  <div class="row">
+  </div>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class=" offset-md-4 col-md-4 ">
+      <br>
+      <br>
+      <div class="card card-signin my-5 ">
+        <div class="card-body">
+          <h5 class="card-title">Customer Deatils</h5>
+          <label>Customer Id</label>
+          <input type="text" name="id" [(ngModel)]="customer.id" class="form-control" [disabled]="editFlag"/>
+          <label>Customer Name</label>
+          <input type="text" name="name" [(ngModel)]="customer.name" [disabled]="editFlag"class="form-control"/>
+          <label>Customer Email</label>
+          <input type="text" name="email" [(ngModel)]="customer.email"  [disabled]="editFlag" class="form-control"/>
+          <br>
+          <div class="row">
+            <div class=" offset-md-1 col-md-3">
+              <button class="btn btn-sm" *ngIf="editFlag" (click)="editCustomer(customer._id , customer)" style="background: orange; color: white"> <i class="material-icons">&#xE254;</i>&nbsp;Edit</button>
+              <button class="btn btn-sm btn-primary" *ngIf="saveFlag" (click)="SaveCustomer(customer)" style=" color: white"><i class="material-icons">&#xE03B;</i>&nbsp;Save</button>
+              <br>
+            </div>
+            <div class=" offset-md-1 col-md-3">
+              <button class="btn btn-sm"  (click)="deleteCustomer(customer._id)" style="background: red; color: white"><i class="material-icons">&#xE872;</i> &nbsp;Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
