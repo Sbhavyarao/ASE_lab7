@@ -41,9 +41,9 @@ export class CustomerdetailsComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           type: 'success',
-          title: 'Customer data saved successfully',
+          title: 'Customer data Updated successfully',
           showConfirmButton: false,
-          timer: 1500
+          timer: 4000
         });
         this.router.navigate(['/customers']);
       }, (err) => {
@@ -58,7 +58,7 @@ export class CustomerdetailsComponent implements OnInit {
           type: 'success',
           title: 'Customer data deleted successfully',
           showConfirmButton: false,
-          timer: 1500
+          timer: 4000
         });
         this.router.navigate(['/customers']);
         }, (err) => {

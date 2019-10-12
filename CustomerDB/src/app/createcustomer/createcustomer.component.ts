@@ -37,7 +37,7 @@ export class CreatecustomerComponent implements OnInit {
           type: 'success',
           title: 'Customer data saved successfully',
           showConfirmButton: false,
-          timer: 1500
+          timer: 4000
         });
         this.router.navigate(['/customers']);
       }, (err) => {
